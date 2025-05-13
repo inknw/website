@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étude Stress Peropératoire | INOR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a4d80;
+            --secondary: #2e7d32;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #f8f9fa;
+            line-height: 1.6;
+            color: #2c3e50;
+        }
+
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary);
+        }
+
+        .medical-icon {
+            font-size: 2.5em;
+            margin: 0 15px;
+            color: var(--secondary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 20px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--secondary);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .consent-box {
+            background: #e3f2fd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            display: block;
+            margin: 2rem auto;
+        }
+
+        button:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .required::after {
+            content: " *";
+            color: #e74c3c;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .header h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <div class="header">
+        <h1>
+            <i class="fas fa-hospital medical-icon"></i>
+            Questionnaire sur le Stress Peropératoire
+            <i class="fas fa-stethoscope medical-icon"></i>
+        </h1>
+        <p>Hôpital Moulay Youssef • Hôpital Militaire Mohammed V • INOR</p>
+    </div>
+
+    <div class="container">
+        <form action="https://formspree.io/f/xvojnqkj" method="POST">
+            
+            <!-- Section Préambule -->
+            <div class="section">
+                <h2><i class="fas fa-file-medical"></i> Préambule</h2>
+                <p>Le secteur hospitalier et en particulier le bloc opératoire constitue l'un des environnements les plus complexes, où de multiples exigences professionnels peuvent entrainer un stress accru pour toute l'équipe chirurgicale, dont l'infirmier(e) instrumentiste. Ce dernier joue un rôle central dans la sécurité et le bon déroulement de l'intervention. Pourtant, <strong>le stress spécifique vécu par ce professionnel reste peu exploré dans la littérature internationale</strong>, malgré son impact potentiel sur la qualité des soins et la satisfaction professionnelle.</p>
+                <p>Monsieur / Madame,</p>
+                <p>Nous sommes des étudiantes en soins infirmiers, option Infirmier(e) en Bloc Opératoire à l’ISPITS de Rabat. Ce questionnaire s’inscrit dans le cadre de notre étude intitulée :
+ <strong>« Le Stress dans la Phase Peropératoire : le Cas des Infirmier(e)s Instrumentistes »</strong>.Il vise à identifier et mieux comprendre les facteurs de stress ressentis au cours de la phase peropératoire, selon le point de vue des infirmier(e)s instrumentistes eux-mêmes.
+</p>
+                <p><strong>Notez bien </strong>: qu’il n y a pas de bonnes ni de mauvaises réponses. C’est votre point de vue qui compte pour nous. Le présent questionnaire est anonyme, les données ne seront utilisées qu’à des fins scientifiques et ne seront jamais communiquées de façon normative. Votre contribution permettra de faire progresser la recherche dans un domaine encore trop peu documenté, et de sensibiliser à une problématique souvent taboue dans le contexte hospitalier. </p>
+                <p>Le questionnaire contient les deux sections suivantes: (1) des éléments sur vos caractéristiques démographiques et professionnels, (2) l'échelle d'évaluation psychométrique du stress des travailleurs de la santé. Merci de répondre à chaque question en fonction de votre situation et votre expérience en bloc opératoire.</p>
+                <!-- Consentement -->
+                <div class="consent-box">
+                    <h3><i class="fas fa-check-double"></i> Formulaire de Consentement</h3>
+                    <div class="form-group">
+                        <label><input type="checkbox" required> Je confirme avoir pris connaissance des objectifs et du déroulement de cette étude, et j'accepte librement d'y participer</label>
+                        <label><input type="checkbox" required> Je suis informé(e) que ma participation est volontaire, que je peux refuser d'y participer ou me retirer sans aucune contrainte</label>
+                        <label><input type="checkbox" required> J'ai été informé(e) que toutes mes données personnelles resteront strictement anonymes et confidentielles</label>
+                        <label><input type="checkbox" required> J'ai reçu les coordonnées du responsable de l'étude, afin d'exercer mes droits d'accès, de rectification et d'opposition, conformément à la loi 09-08</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 1: Identification -->
+            <div class="section">
+                <h2><i class="fas fa-id-card"></i> 1. Identification Professionnelle et Personnelle</h2>
+                
+                <div class="form-group">
+                    <label class="required">Spécialité :</label>
+                    <input type="text" name="specialite" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Sexe :</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="sexe" value="Femme" required> Femme</label>
+                        <label><input type="radio" name="sexe" value="Homme"> Homme</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Âge :</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="age" value="21-30" required> 21-30 ans</label>
+                        <label><input type="radio" name="age" value="31-40"> 31-40 ans</label>
+                        <label><input type="radio" name="age" value="41-50"> 41-50 ans</label>
+                        <label><input type="radio" name="age" value="50+"> Plus de 50 ans</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Expérience en bloc opératoire :</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="experience" value="1-5" required> 1-5 ans</label>
+                        <label><input type="radio" name="experience" value="5-10"> 5-10 ans</label>
+                        <label><input type="radio" name="experience" value="10-15"> 10-15 ans</label>
+                        <label><input type="radio" name="experience" value="15-20"> 15-20 ans</label>
+                        <label><input type="radio" name="experience" value="20+"> Plus de 20 ans</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Niveau académique :</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="niveau" value="Licence" required> Licence (ISPITS)</label>
+                        <label><input type="radio" name="niveau" value="Master"> Master (ISPITS)</label>
+                        <label><input type="radio" name="niveau" value="Autre"> Autre : <input type="text" name="niveau_autre"></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">État civil :</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="etat_civil" value="Marié(e)" required> Marié(e)</label>
+                        <label><input type="radio" name="etat_civil" value="Célibataire"> Célibataire</label>
+                        <label><input type="radio" name="etat_civil" value="Veuf(ve)"> Veuf(ve)</label>
+                        <label><input type="radio" name="etat_civil" value="Divorcé(e)"> Divorcé(e)</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Nombre d'enfants :</label>
+                    <input type="number" name="enfants" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Maladie(s) chronique(s) :</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="maladie" value="Oui" required> Oui</label>
+                        <label><input type="radio" name="maladie" value="Non"> Non</label>
+                    </div>
+                    <textarea name="maladie_details" placeholder="Si oui, précisez :"></textarea>
+                </div>
+            </div>
+
+            <!-- Modèle de Karasek -->
+            <div class="section">
+                <h2><i class="fas fa-brain"></i> Modèle de KARASEK</h2>
+                
+                <!-- Demande psychologique -->
+                <h3>Axe : Demande psychologique</h3>
+                <table>
+                    <p>Pas du tout d’accord = 1, pas d’accord = 2, d’accord = 3, Tout à fait d’accord = 4</p>
+                    <tr>
+                        <th>Situations</th>
+                        <th>Pas du tout d’accord</th>
+                        <th>pas d’accord</th>
+                        <th>d’accord</th>
+                        <th>Tout à fait d’accord</th>
+                        
+                    </tr>
+                    <!-- Q10 à Q18 -->
+                    <tr>
+                        <td>Q10 - Les interventions me demandent de travailler très rapidement</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Q11 – On me confie une charge de travail instrumentale excessive dans un temps limité.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q12 – Je dispose  suffisamment de temps pour préparer et exécuter correctement mon rôle d'instrumentiste.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q14 – Je reçois parfois des consignes contradictoires de la part du chirurgien ou de l’équipe.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q15 – Mon rôle d'instrumentiste me demande de rester concentré(e) intensément pendant toute l’intervention.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q1 – Mon travail m’expose à des périodes prolongées de tension et de vigilance.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q16 – Mon travail est souvent interrompu (modification de protocole, changement d’instrumentation, imprévus).</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q17 – Mon environnement de travail au bloc est stressant ou désorganisé.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q18 – J’attends régulièrement les consignes d’autres membres de l’équipe (chirurgien, anesthésiste) pour avancer.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                </table>
+
+                <!-- Latitude décisionnelle -->
+                <h3>Axe : Latitude décisionnelle</h3>
+                <table>
+                    <p>Pas du tout d’accord = 1, pas d’accord = 2, d’accord = 3, Tout à fait d’accord = 4</p>
+                    <tr>
+                        <th>Situations</th>
+                        <th>Pas du tout d’accord</th>
+                        <th>pas d’accord</th>
+                        <th>d’accord</th>
+                        <th>Tout à fait d’accord</th>
+                        
+                    </tr>
+                    <tr>
+                        <td><tr>
+                        <td>Q4 – Mon rôle me permet de prendre des décisions adaptées face à un imprévu.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    <tr>
+                        <td>Q6 – J’ai une réelle autonomie pour ajuster ma pratique en cours d’intervention.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q8 – Je peux influencer certaines décisions techniques ou logistiques pendant l’intervention.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q5 – Mon travail me demande une maîtrise technique constante et évolutive.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q7 – Mes tâches au bloc sont suffisamment variées pour mobiliser l’ensemble de mes compétences.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q2 – J’exerce un rôle actif dans la sécurité opératoire à travers mes compétences spécifiques.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q9 – J’ai des occasions d’apprendre de nouvelles techniques ou d’approfondir mes savoirs.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q3 – Mon travail m’offre la possibilité de participer à des formations ou de me perfectionner.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q1 – Mon rôle me permet d’exprimer de la créativité ou de l’initiative technique.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                </table>
+
+                <!-- Soutien social -->
+                <h3>Axe : Soutien social</h3>
+                <table>
+                    <p>Pas du tout d’accord = 1, pas d’accord = 2, d’accord = 3, Tout à fait d’accord = 4</p>
+                    <tr>
+                        <th>Situations</th>
+                        <th>Pas du tout d’accord</th>
+                        <th>pas d’accord</th>
+                        <th>d’accord</th>
+                        <th>Tout à fait d’accord</th>
+                        
+                    </tr>
+                   <tr>
+                        <td>Q22 – Le chirurgien (ou mon supérieur direct) favorise une bonne collaboration au sein de l’équipe opératoire.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q21 – Mon supérieur direct (cadre IBODE, anesthésiste, chirurgien) m’aide à mener à bien mes tâches en cas de difficulté.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q23 – Les collègues IBODE avec qui je travaille sont professionnellement compétents.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q26 – Les collègues avec qui je travaille me soutiennent dans mes tâches instrumentales lors des situations complexes.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q20 – Le chirurgien (ou mon supérieur hiérarchique) est attentif à mes remarques et observations pendant l’intervention.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q19 – Mon supérieur semble concerné par mon bien-être psychologique et physique au bloc.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q25 – Les collègues avec qui je travaille entretiennent des relations bienveillantes et respectueuses.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td>Q24 – Je sens que mes collègues IBODE s’intéressent sincèrement à ce que je vis au travail.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Modèle de Siegrist -->
+            <div class="section">
+                
+                <h2><i class="fas fa-balance-scale-right"></i> Modèle de SIEGRIST</h2>
+                <table>
+                    <p>D'accord = 1, Pas d'accord (non perturbé) = 2, Pas d'accord (un peu perturbé) = 3, Pas d'accord (perturbé) = 4, Pas d'accord (très perturbé) = 5 </p>
+                    <tr>
+                        <th>Situations</th>
+                        <th>D'accord</th>
+                        <th>Pas d'accord (non perturbé)</th>
+                        <th>Pas d'accord (un peu perturbé)</th>
+                        <th>Pas d'accord (perturbé)</th>
+                        <th>Pas d'accord (très perturbé)</th>
+                    </tr>
+                    <tr>
+                        <td>Q7. Je reçois le respect que je mérite de la part des chirurgiens et de l’équipe médicale en salle.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                        <td><input type="radio" name="q10" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Q8. Je reçois le respect que je mérite de la part de mes collègues du bloc opératoire.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                        <td><input type="radio" name="q10" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Q9. En situation difficile (urgence, imprévu), je bénéficie d’un soutien adéquat de la part de l’équipe médicale.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                        <td><input type="radio" name="q10" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Q10. Je me sens parfois traité(e) de façon injuste pendant la phase périopératoire.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                        <td><input type="radio" name="q10" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Q11. Vu tous mes efforts en salle d’opération, je   reçois la reconnaissance que je mérite</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                        <td><input type="radio" name="q10" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Q12. Je vis ou je redoute un changement négatif dans ma situation professionnelle à l’hôpital (mutation, restriction de poste, surcharge).</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                        <td><input type="radio" name="q10" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Q13. Je ressens une insécurité concernant la stabilité de mon poste d’infirmier instrumentiste.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                        <td><input type="radio" name="q10" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Q14. Mes possibilités d’évolution ou de spécialisation sont faibles malgré mon engagement au bloc opératoire.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                        <td><input type="radio" name="q10" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Q15. Mes compétences spécifiques (gestion du matériel, anticipation peropératoire) sont reconnues à leur juste valeur dans mon service.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                        <td><input type="radio" name="q10" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Q16. Malgré mes efforts en situation opératoire, mes perspectives de carrière restent limitées.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                        <td><input type="radio" name="q10" value="5"></td>
+                    </tr>
+                    <tr>
+                <td>Q17. Malgré mon implication en salle d’opération, mon niveau de rémunération ne reflète pas mes responsabilités.</td>
+                        <td><input type="radio" name="q10" value="1" required></td>
+                        <td><input type="radio" name="q10" value="2"></td>
+                        <td><input type="radio" name="q10" value="3"></td>
+                        <td><input type="radio" name="q10" value="4"></td>
+                        <td><input type="radio" name="q10" value="5"></td>
+                    </tr>
+                </table>
+                </div>
+            
+
+            <!-- Références -->
+            <div class="section">
+                <h2><i class="fas fa-book-open"></i> Références</h2>
+                <p><strong>Version française du questionnaire du SIEGREST</strong></p>
+                <p>Niedhammer I, Siegrist J, Landre MF, Goldberg M, Leclerc A. Etude des qualités psychométriques de la version française du</p>
+                <p>modèle du Déséquilibre Efforts/Récompenses. Revue d’Epidémiologie et de Santé Publique 2000;48:419-437</p>
+                <p>Siegrist J, Starke D, Chandola T, Godin I, Marmot M, Niedhammer I, Peter R. The measurement of effort-reward imbalance at work: European comparisons. Social Science and Medicine 2004;58:1483-1499</p>
+                <p><strong>Version française du questionnaire du KARASEK</strong></p>
+                <p>Niedhammer, Isabelle, Ganem, Virginie, Gendrey, Laurent, David, Sylvie, & Sultan-Taïeb, Isabelle.</p>
+                <p>Traduction française des échelles de la demande psychologique, de la latitude décisionnelle et du soutien social du « Job Content Questionnaire » de Karasek : résultats de l’enquête SUMER. <strong>Santé Publique</strong>, vol. 18, no 4, 2006, pp. 413–427.</p>
+            </div>
+
+            <button type="submit"><i class="fas fa-paper-plane"></i> Soumettre</button>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const consentCheckboxes = document.querySelectorAll('.consent-box input[type="checkbox"]');
+            let allChecked = true;
+            
+            consentCheckboxes.forEach(checkbox => {
+                if(!checkbox.checked) allChecked = false;
+            });
+
+            if(!allChecked) {
+                alert('Veuillez accepter toutes les clauses de consentement');
+                e.preventDefault();
+            }
+        });
+        
+    </script>
+    <!-- Footer Section -->
+<footer style="background-color: #1a4d80; color: white; padding: 2rem; text-align: center; margin-top: 3rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <!-- Copyright -->
+        <p style="margin-bottom: 1rem;">
+            &copy; 2025 Étude sur le Stress Peropératoire - Tous droits réservés
+        </p>
+        
+        <!-- Author Credit -->
+        <div style="margin-bottom: 1.5rem;">
+            <p style="font-weight: 600; margin-bottom: 0.5rem;">Réalisé par :</p>
+            <p style="margin: 0;">CHTIOUI Oumaima</p>
+            <p style="margin: 0.3rem 0;">
+                <i class="fas fa-envelope" style="margin-right: 5px;"></i>
+                <a href="mailto:Coumaima998@gmail.com" style="color: #4CAF50; text-decoration: none;">Coumaima998@gmail.com</a>
+            </p>
+        </div>
+        
+        <!-- Professional Links -->
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <a href="https://www.linkedin.com/in/oumaima-chtoui" target="_blank" style="color: white; text-decoration: none;">
+                <i class="fab fa-linkedin" style="margin-right: 5px;"></i> LinkedIn
+            </a>
+            <a href="https://github.com/oumaima-chtoui" target="_blank" style="color: white; text-decoration: none;">
+                <i class="fab fa-github" style="margin-right: 5px;"></i> GitHub
+            </a>
+            <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" style="color: white; text-decoration: none;">
+                <i class="fab fa-orcid" style="margin-right: 5px;"></i> ORCID
+            </a>
+            <a href="https://researchgate.net/profile/Oumaima-Chtoui" target="_blank" style="color: white; text-decoration: none;">
+                <i class="fab fa-researchgate" style="margin-right: 5px;"></i> ResearchGate
+            </a>
+        </div>
+        
+        <!-- Institutional Logo -->
+        <div style="margin-top: 1.5rem;">
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dates-concours.ma%2Fecoles-universites-au-maroc%2Fispits-institut-superieur-des-professions-infirmieres-et-technique-de-sante-dates-concours%2F&psig=AOvVaw2rCwIiOVMDVRF-2K-HwXby&ust=1747180134171000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNin96yPn40DFQAAAAAdAAAAABAo" 
+                 alt="ISPITS Rabat" 
+                 style="height: 60px; filter: brightness(0) invert(1);">
+            <p style="margin-top: 0.5rem;">Institut Supérieur des Professions Infirmières et Techniciens de Santé - Rabat</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Font Awesome for icons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</body>
+</html>
